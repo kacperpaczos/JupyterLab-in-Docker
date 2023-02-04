@@ -1,0 +1,14 @@
+version: "3"
+services:
+  gatsby-server:
+    platform: linux/amd64
+    build:
+      context: ./dockerfiles
+      dockerfile: Dockerfile
+    ports:
+      - "80:8888"
+    volumes:
+      - ./jupyterLabData:/jupyterLabData:rw
+    environment:
+
+
