@@ -1,6 +1,6 @@
 version: "3.4"
 services:
-  gatsby-server:
+  jupyterlab:
     platform: linux/amd64
     build:
       context: ./dockerfiles
@@ -10,5 +10,6 @@ services:
     volumes:
       - ./jupyterLabData:/home/jovyan/work:rw
     environment:
+        JUPYTER_TOKEN: "ADJES38s3"
 
 
