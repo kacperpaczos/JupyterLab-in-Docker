@@ -1,14 +1,14 @@
-FROM python:3
+FROM jupyter/datascience-notebook:x86_64-python-3.10
 
 USER root
-WORKDIR /projects
+
+WORKDIR /tmp
 
 COPY requirements.txt ./
 
 RUN pip install --no-cache-dir --upgrade pip \
   && pip install --no-cache-dir -r requirements.txt
 
-COPY ./data /projects/data # TODO
-COPY ./notebooks /projects/notebooks # TODO
+USER $NB_UID
+WORKDIR "${HOME}"
 
-ENTRYPOINT ["/bin/sh", "docker-entrypoint.sh"]
