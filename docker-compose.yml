@@ -6,7 +6,7 @@ services:
       context: ./
       dockerfile: Dockerfile
     ports:
-      - "8008:8888"
+      - "8888:8888"
     volumes:
       - ./jupyterLabData:/home/jovyan/work:rw
     environment:
