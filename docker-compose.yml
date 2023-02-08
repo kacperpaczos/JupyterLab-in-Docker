@@ -1,6 +1,7 @@
 version: "3.4"
 services:
   jupyterlab:
+    user: 1000:1000
     platform: linux/amd64
     build:
       context: ./
@@ -8,8 +9,10 @@ services:
     ports:
       - "8888:8888"
     volumes:
-      - ./jupyterLabData:/home/jovyan/work:rw
+      - ./jupyterLabData/workspace:/home/jovyan/workspace:rw
     environment:
         JUPYTER_TOKEN: "ADJES38s3"
+
+    
 
 
