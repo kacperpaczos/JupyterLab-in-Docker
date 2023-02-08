@@ -1,7 +1,5 @@
 # JupyterLab-in-Docker
 JupyterLab-in-Docker
 
-TODO:
-more python lib?
-token support
-
+### Run comand 
+sudo docker compose up --build
