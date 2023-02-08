@@ -3,7 +3,7 @@ services:
   jupyterlab:
     platform: linux/amd64
     build:
-      context: ./dockerfiles
+      context: ./
       dockerfile: Dockerfile
     ports:
       - "8008:8888"
