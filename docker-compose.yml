@@ -2,6 +2,7 @@ version: "3.4"
 services:
   jupyterlab:
     user: 1000:1000
+    container_name: jupyterlab
     platform: linux/amd64
     build:
       context: ./
@@ -13,6 +14,8 @@ services:
     environment:
         JUPYTER_TOKEN: "ADJES38s3"
 
-    
 
-
+networks: 
+  default: 
+    external: 
+      name: common-network 

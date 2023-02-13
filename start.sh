@@ -6,4 +6,5 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 sudo docker compose up --build
+sleep 5s
 sudo chmod 777 -R ./
