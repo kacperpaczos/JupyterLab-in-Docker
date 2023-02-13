@@ -5,6 +5,6 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-sudo docker compose up --build
+sudo docker compose up --build -d
 sleep 5s
-sudo chmod 777 -R ./
+sudo chmod 777 -R ./jupyterLabData
